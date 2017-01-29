@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GoogleTrendsRequest</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="google-trends-api.js"></script>
+    <script type="text/javascript">
+
+      var gt = new googleTrends.GoogleTrendsApi();
+      gt.trendData({keywords: ["dog house"], timePeriod: { type: 'day', value: 20}}, function(err, data) {
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
