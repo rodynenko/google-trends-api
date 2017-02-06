@@ -5,11 +5,12 @@
     <title>GoogleTrendsRequest</title>
   </head>
   <body>
+    <h1>Google Trends API. Test page</h1>
     <script type="text/javascript" src="google-trends-api.js"></script>
     <script type="text/javascript">
 
-      var gt = new googleTrends.GoogleTrendsApi();
-      gt.trendData({keywords: ["dog house"], timePeriod: { type: 'day', value: 20}}, function(err, data) {
+      var gt = googleTrends;
+      gt.trendData({keywords: "dog house", timePeriod: { type: 'day', value: 20}}, function(err, data) {
         console.log(data);
       });
     </script>

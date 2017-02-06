@@ -1,11 +1,13 @@
+var webpack = require('webpack');
+
 module.exports = {
-  context: __dirname + "/src",
-  entry: "./GoogleTrendsApi",
+  entry: "./index",
   output: {
       path: __dirname + "/build",
       filename: "google-trends-api.js",
       library: "googleTrends"
   },
+  devtool: "eval-cheap-source-map",
   module: {
     loaders: [
       {
@@ -17,5 +19,11 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+          sourceMap: true,
+          warning: false,
+        }),
+    ],
 };

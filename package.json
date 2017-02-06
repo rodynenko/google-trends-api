@@ -4,6 +4,7 @@
   "description": "JavaScript implementation of unofficial Google Trends API for using in browser",
   "main": "index.js",
   "scripts": {
+    "example": "webpack-dev-server --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
